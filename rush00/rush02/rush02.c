@@ -45,6 +45,6 @@ void rush(int cul, int row)
 
 int main()
 {
-    rush(9, 20);
+    rush(193, 200);
     return 0;
 }
