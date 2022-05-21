@@ -40,21 +40,6 @@ void ft_print_comb2(void)
             b = a + 1;
         }
     }
-
-    // if(b < 10) {
-    //     rear[0] = '0';
-    //     rear[1] = b + '0';
-    // }else {
-    //     rear[0] = (b / 10) + '0';
-    //     rear[1] = (b % 10) + '0';
-    // }
-    // if(a < 10) {
-    //     front[0] = '0';
-    //     rear[1] = a + '0';
-    // }else{
-    //     front[0] = (a / 10) + '0';
-    //     front[1] = (a % 10) + '0';
-    // }
 }
 
 int main()
