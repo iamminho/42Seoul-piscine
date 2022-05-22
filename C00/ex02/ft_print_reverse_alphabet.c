@@ -1,40 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_print_reverse_alphabet.c                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: milee2 <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/22 10:06:32 by milee2            #+#    #+#             */
-/*   Updated: 2022/05/22 20:47:37 by milee2           ###   ########.fr       */
+/*   Created: 2022/05/21 16:28:37 by milee2            #+#    #+#             */
+/*   Updated: 2022/05/21 16:33:38 by milee2           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	print(char c)
+void	ft_print_reverse_alphabet(void)
 {
-	write (1, &c, 1);
-}
+	char	a;
 
-void	ft_putnbr(int nb)
-{
-	if (nb == 0)
+		a = 'z';
+	while (a >= 'a')
 	{
-		write (1, "0", 1);
-		return ;
+		write(1, &a, 1);
+		a--;
 	}
-	if (nb == -2147483648)
-	{
-		write(1, "-2147483648", 11);
-		return ;
-	}
-	if (nb < 0)
-	{
-		print('-');
-		nb = -nb;
-	}
-	if (nb > 9)
-		ft_putnbr(nb / 10);
-	print(nb % 10 + '0');
 }

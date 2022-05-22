@@ -1,40 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_is_negative.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: milee2 <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/22 10:06:32 by milee2            #+#    #+#             */
-/*   Updated: 2022/05/22 20:47:37 by milee2           ###   ########.fr       */
+/*   Created: 2022/05/21 16:41:15 by milee2            #+#    #+#             */
+/*   Updated: 2022/05/22 20:59:14 by milee2           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	print(char c)
+void	ft_is_negative(int n)
 {
-	write (1, &c, 1);
-}
+	char	result;
 
-void	ft_putnbr(int nb)
-{
-	if (nb == 0)
+	if (n < 0)
 	{
-		write (1, "0", 1);
-		return ;
+		result = 'N';
 	}
-	if (nb == -2147483648)
+	else
 	{
-		write(1, "-2147483648", 11);
-		return ;
-	}
-	if (nb < 0)
-	{
-		print('-');
-		nb = -nb;
-	}
-	if (nb > 9)
-		ft_putnbr(nb / 10);
-	print(nb % 10 + '0');
+		result = 'P';
+	}	
 }
